@@ -1,0 +1,94 @@
+---
+import Base from "@layouts/Base.astro";
+import { Image } from "astro:assets";
+
+import heroImg from "../assets/images/hero-image.jpg";
+---
+
+<Base title="This is the home page">
+  <section class="hero-section">
+    <Image
+      src={heroImg}
+      width={1500}
+      alt="This is a background image"
+      class="hero-img"
+    />
+    <div class="main-container">
+      <div class="hero_comp">
+        <h1>Developing awe-inspiring designs</h1>
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui
+          blanditiis.Suspendisse varius enim
+        </p>
+        <a href="/">View more</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero-section {
+    position: relative;
+    clip-path: inset(0);
+    min-height: 100vh;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & .hero_comp {
+      padding: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & h1 {
+        font-size: clamp(2.5rem, 5vw + 3rem, 10rem);
+        word-spacing: 100vw;
+        letter-spacing: -0.03em;
+        line-height: 1.1;
+        margin-bottom: 0.5em;
+      }
+
+      & p {
+        max-width: 40ch;
+        margin-bottom: 2em;
+      }
+
+      & a {
+        font-size: 1.15em;
+        color: black;
+        padding: 0.5em 3.5em;
+        background-color: white;
+        font-weight: 600;
+        border-radius: 0.15em;
+        text-transform: uppercase;
+
+        letter-spacing: 0.05em;
+
+        transition:
+          background-color 0.5s,
+          color 0.5s;
+
+        &:hover {
+          background-color: black;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .hero-img {
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+</style>

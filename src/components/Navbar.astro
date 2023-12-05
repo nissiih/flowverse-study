@@ -1,0 +1,61 @@
+---
+import Logo from "@components/assets/Logo.astro";
+---
+
+<nav class="navbar">
+  <div class="main-container">
+    <div class="navbar_comp">
+      <a href="/" class="navbar_logo-wrapper"><Logo /></a>
+      <ul class="navbar_menu-desktop">
+        <li><a href="/about">About</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    background-color: #ebeaea;
+    color: black;
+  }
+
+  .navbar_comp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar_menu-desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+
+    & li {
+      padding: 10px;
+      transition: color 250ms;
+
+      &:hover {
+        color: #ed2f2f;
+      }
+
+      & a {
+        text-transform: uppercase;
+        justify-content: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+      }
+    }
+  }
+
+.navbar_logo-wrapper {
+    display: flex;
+    width: 180px;
+}
+
+</style>

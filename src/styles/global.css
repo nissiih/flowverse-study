@@ -1,0 +1,39 @@
+/*  style resets */
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 400;
+
+  overscroll-behavior: none;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  text-size-adjust: none;
+  margin: 0;
+  position: relative;
+}
+
+.main-container {
+  width: 90vw;
+  max-width: 1440px;
+  margin-inline: auto;
+}

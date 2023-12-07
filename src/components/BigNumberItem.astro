@@ -1,0 +1,32 @@
+---
+export interface Props {
+  number: string;
+  text: string;
+}
+
+const { number = "00k", text = "text here" } = Astro.props as Props;
+---
+
+<div class="what_big-number-item">
+  <span>{number}</span>
+  <p>{text}</p>
+</div>
+
+<style>
+  .what_big-number-item {
+    padding: 2em 0.8em;
+    text-align: center;
+    border: 1.5px solid #80808025;
+
+    & span {
+      font-weight: 700;
+      font-size: 4em;
+      letter-spacing: -0.03em;
+      line-height: 100%;
+    }
+
+    & p {
+      margin-top: 0.8em;
+    }
+  }
+</style>

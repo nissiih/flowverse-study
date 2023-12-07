@@ -17,6 +17,21 @@ a {
   text-decoration: inherit;
 }
 
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+section {
+  padding: 7em 0em;
+}
+
+section.hero-section {
+  padding: 0em;
+}
+
 body {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 400;

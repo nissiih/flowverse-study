@@ -1,8 +1,10 @@
 ---
 import Base from "@layouts/Base.astro";
+import BigNumberItem from "@components/BigNumberItem.astro";
 import { Image } from "astro:assets";
 
 import heroImg from "../assets/images/hero-image.jpg";
+import whatImg from "../assets/images/what-img.jpg";
 ---
 
 <Base title="This is the home page">
@@ -24,9 +26,40 @@ import heroImg from "../assets/images/hero-image.jpg";
       </div>
     </div>
   </section>
+  <section>
+    <div class="main-container">
+      <div class="what_comp">
+        <div class="what_top">
+          <Image src={whatImg} width={1500} alt="This is a background image" />
+          <div class="what_content">
+            <h2 class="overline">what we do</h2>
+            <h3 class="x-hs-medium">
+              Unlocking your brand's full potential through strategic
+              improvements
+            </h3>
+            <img src="../../src/assets/quote.png" alt="quote" />
+            <p>
+              Every startup has a story, and design is the eloquent narrator
+              that captivates audiences.
+            </p>
+          </div>
+        </div>
+        <div class="what_big-numbers-grid">
+          <BigNumberItem number="25k" text="Completed Projects" />
+          <BigNumberItem number="95%" text="Happy Costumer" />
+          <BigNumberItem number="70+" text="Clients Overall" />
+          <BigNumberItem number="3X" text="Yearly Growth" />
+        </div>
+      </div>
+    </div>
+  </section>
 </Base>
 
 <style>
+  body {
+    height: 500vh;
+  }
+
   .hero-section {
     position: relative;
     clip-path: inset(0);
@@ -80,15 +113,68 @@ import heroImg from "../assets/images/hero-image.jpg";
         }
       }
     }
+    .hero-img {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
   }
 
-  .hero-img {
-    object-fit: cover;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  :root {
+    --custom-spacing: 2.5em;
+  }
+
+  .what_top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--custom-spacing);
+
+    & > img {
+      height: 25em;
+    }
+
+    & .what_content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      & img {
+        width: 65px;
+        height: 65px;
+      }
+
+      & p {
+        max-width: 45ch;
+      }
+    }
+  }
+
+  .what_big-numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--custom-spacing);
+    margin-top: calc(1.5 * var(--custom-spacing));
+  }
+
+  @media screen and (max-width: 997px) {
+    .what_top {
+      grid-template-columns: 1fr;
+    }
+
+    .what_big-numbers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+
+
+    .what_big-numbers-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

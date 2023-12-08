@@ -1,10 +1,13 @@
 ---
 import Base from "@layouts/Base.astro";
 import BigNumberItem from "@components/BigNumberItem.astro";
+import TeamMemberCard from "@components/TeamMemberCard.astro";
+
 import { Image } from "astro:assets";
 
 import heroImg from "../assets/images/hero-image.jpg";
 import whatImg from "../assets/images/what-img.jpg";
+import howImg from "../assets/images/how-image.jpg";
 ---
 
 <Base title="This is the home page">
@@ -49,6 +52,44 @@ import whatImg from "../assets/images/what-img.jpg";
           <BigNumberItem number="95%" text="Happy Costumer" />
           <BigNumberItem number="70+" text="Clients Overall" />
           <BigNumberItem number="3X" text="Yearly Growth" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-gray-dark">
+    <div class="main-container">
+      <div class="how_comp">
+        <h2 class="x-hs-medium">How it works</h2>
+        <Image src={howImg} width={1500} alt="This is a background image" />
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="main-container">
+      <div class="team_comp">
+        <h2 class="overline">OUR TEAM</h2>
+        <h3 class="x-hs-medium">Triumphant alliance</h3>
+        <div class="team_grid">
+          <TeamMemberCard
+            name="Jack"
+            email="renata@lol.com"
+            role="Support"
+            img="blabla"
+            facebook="jack"
+          />
+          <TeamMemberCard
+            name="Roberto"
+            email="renata@lol.com"
+            role="Support"
+            img="blabla"
+          />
+          <TeamMemberCard
+            name="Renata"
+            email="renata@lol.com"
+            role="Support"
+            img="blabla"
+            linkedin="renata"
+          />
         </div>
       </div>
     </div>
@@ -160,6 +201,21 @@ import whatImg from "../assets/images/what-img.jpg";
     margin-top: calc(1.5 * var(--custom-spacing));
   }
 
+  .team_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--custom-spacing);
+  }
+
+  .team_comp {
+    display: grid;
+    gap: 1.5em;
+
+    & h3 {
+      margin-bottom: 1.5em;
+    }
+  }
+
   @media screen and (max-width: 997px) {
     .what_top {
       grid-template-columns: 1fr;
@@ -170,9 +226,17 @@ import whatImg from "../assets/images/what-img.jpg";
     }
   }
 
+  .how_comp {
+    & .x-hs-medium {
+      margin-bottom: 1.5em;
+    }
+
+    & img {
+      max-height: clamp(10rem, 35vw + 6rem, 40rem);
+    }
+  }
+
   @media screen and (max-width: 430px) {
-
-
     .what_big-numbers-grid {
       grid-template-columns: 1fr;
     }

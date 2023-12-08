@@ -1,4 +1,8 @@
 /*  style resets */
+:root {
+  --main-red: #ed2f2f;
+  --default-border: 1.9px solid #8080802f;
+}
 
 *,
 *::before,
@@ -51,4 +55,9 @@ body {
   width: 90vw;
   max-width: 1440px;
   margin-inline: auto;
+}
+
+.section-gray-dark {
+  background-color: #191919;
+  color: white;
 }

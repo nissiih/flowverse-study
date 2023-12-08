@@ -1,0 +1,97 @@
+---
+import { Image } from "astro:assets";
+
+import memberImg from "../assets/images/audrey-leanox.jpg";
+
+export interface Props {
+  name: string;
+  role: string;
+  email: string;
+  linkedin?: string;
+  instagram?: string;
+  facebook?: string;
+  img: string;
+}
+
+const { name, role, email, linkedin, instagram, facebook, img } =
+  Astro.props as Props;
+---
+
+<div class="team-member_item">
+  <Image src={memberImg} width={500} alt="This is a background image" />
+  <div class="team-member_info">
+    <p>{name} • <span>{role}</span></p>
+    <a class="team-member_email" href={`mailto:${email}`}>{email}</a>
+    <ul>
+      {
+      linkedin ? (
+        <li>
+        <a href=`https://linkedin.com/${linkedin}` target="_blank"
+          ><i class="fa-brands fa-linkedin"></i></a
+        >
+      </li>
+      ) : null
+    }
+
+    {
+      instagram ? (
+        <li>
+          <a href=`https://instagram.com/${instagram}` target="_blank"
+          ><i class="fa-brands fa-instagram"></i></a
+        >
+      </li>
+      ) : null
+    }
+
+    {
+      facebook ? (
+        <li>
+          <a href=`https://facebook.com/${facebook}` target="_blank"
+          ><i class="fa-brands fa-facebook"></i></a
+        >
+      </li>
+      ) : null
+    }
+
+    </ul>
+  </div>
+</div>
+
+<style>
+  .team-member_item {
+    & img {
+      max-height: 15em;
+    }
+  }
+
+  .team-member_info {
+    padding: 1.5em 0.8em;
+    text-align: center;
+    border: var(--default-border);
+
+    & ul {
+      display: flex;
+      margin-top: 0.5em;
+      justify-content: center;
+      gap: 0.5em;
+    }
+
+    & a {
+      transition: color 250ms;
+    }
+
+    & a:hover {
+      color: var(--main-red);
+    }
+
+    & span {
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .team-member_email {
+      text-decoration: underline;
+    }
+  }
+</style>

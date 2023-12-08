@@ -13,8 +13,7 @@ export interface Props {
   img: string;
 }
 
-const { name, role, email, linkedin, instagram, facebook, img } =
-  Astro.props as Props;
+const { name, role, email, linkedin, instagram, facebook, img } = Astro.props as Props;
 ---
 
 <div class="team-member_item">
@@ -24,35 +23,34 @@ const { name, role, email, linkedin, instagram, facebook, img } =
     <a class="team-member_email" href={`mailto:${email}`}>{email}</a>
     <ul>
       {
-      linkedin ? (
-        <li>
-        <a href=`https://linkedin.com/${linkedin}` target="_blank"
-          ><i class="fa-brands fa-linkedin"></i></a
-        >
-      </li>
-      ) : null
-    }
+        linkedin ? (
+          <li>
+            <a href={`https://linkedin.com/${linkedin}`} target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+        ) : null
+      }
 
-    {
-      instagram ? (
-        <li>
-          <a href=`https://instagram.com/${instagram}` target="_blank"
-          ><i class="fa-brands fa-instagram"></i></a
-        >
-      </li>
-      ) : null
-    }
+      {
+        instagram ? (
+          <li>
+            <a href={`https://instagram.com/${instagram}`} target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+        ) : null
+      }
 
-    {
-      facebook ? (
-        <li>
-          <a href=`https://facebook.com/${facebook}` target="_blank"
-          ><i class="fa-brands fa-facebook"></i></a
-        >
-      </li>
-      ) : null
-    }
-
+      {
+        facebook ? (
+          <li>
+            <a href={`https://facebook.com/${facebook}`} target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+        ) : null
+      }
     </ul>
   </div>
 </div>

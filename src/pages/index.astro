@@ -217,6 +217,10 @@ import howImg from "../assets/images/how-image.jpg";
   }
 
   @media screen and (max-width: 997px) {
+
+    .team_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
     .what_top {
       grid-template-columns: 1fr;
     }
@@ -236,9 +240,13 @@ import howImg from "../assets/images/how-image.jpg";
     }
   }
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 570px) {
     .what_big-numbers-grid {
       grid-template-columns: 1fr;
     }
+
+    .team_grid {
+    grid-template-columns: 1fr;
+  }
   }
 </style>

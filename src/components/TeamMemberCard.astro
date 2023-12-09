@@ -57,12 +57,16 @@ const { name, role, email, linkedin, instagram, facebook, img } = Astro.props as
 
 <style>
   .team-member_item {
+    display: flex;
+    flex-direction: column;
+
     & img {
       max-height: 15em;
     }
   }
 
   .team-member_info {
+    flex: 1 1;
     padding: 1.5em 0.8em;
     text-align: center;
     border: var(--default-border);

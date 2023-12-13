@@ -12,7 +12,7 @@ import Logo from "@components/assets/Logo.astro";
           <a href="tel:355-658-2655">355-658-2655</a>
         </div>
         <nav class="footer_links">
-          <p>HOME</p>
+          <p>home</p>
           <ul class="footer_menu-desktop">
             <li><a href="/about">About</a></li>
             <li><a href="/blog">Blog</a></li>
@@ -20,7 +20,7 @@ import Logo from "@components/assets/Logo.astro";
           </ul>
         </nav>
         <div class="footer_links">
-          <p>PRODUCT LINK</p>
+          <p>product link</p>
           <ul class="footer_menu-desktop">
             <li><a href="/about">Style Guide</a></li>
             <li><a href="/blog">Licensing</a></li>
@@ -59,8 +59,13 @@ import Logo from "@components/assets/Logo.astro";
       .footer_links {
         grid-column: 1 / -1;
         margin-bottom: 2em;
-        border-bottom: var(--default-border);
+        border-bottom: 2px solid #c9c9c9;
         padding-bottom: 1.5em;
+      }
+
+      .footer_links:last-child {
+        border-bottom: 0px;
+        padding-bottom: 0px;
       }
     }
   }
@@ -68,12 +73,15 @@ import Logo from "@components/assets/Logo.astro";
     display: flex;
     flex-direction: column;
     gap: 0.5em;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
   }
 
   .footer_logo-wrapper {
     display: flex;
     width: 190px;
-    margin-bottom: 2.5em;
+    margin-bottom: 3em;
   }
 
   .footer_links {
@@ -84,14 +92,32 @@ import Logo from "@components/assets/Logo.astro";
     & li {
       margin-bottom: 0.5em;
     }
+
+    & p {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    & a:hover {
+      color: var(--main-red);
+    }
   }
 
   .footer_comp {
     & .copyright-text {
+      font-size: 14px;
+      font-weight: 600;
       border-top: 2px solid #c9c9c9;
-      margin-top: 1em;
+      margin-top: 1.5em;
       padding-top: 1.5em;
       text-align: center;
+      color: rgba(0, 0, 0, 0.608);
 
       & a:hover {
         color: var(--main-red);

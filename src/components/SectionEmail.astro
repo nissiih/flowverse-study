@@ -1,0 +1,113 @@
+---
+
+---
+
+<section class="section-sub">
+  <div class="main-container">
+    <div class="sub_comp">
+      <h2 class="x-hs-medium">Get in Touch</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique duis
+      </p>
+      <div class="sub_email">
+        <form
+          class="subscription-form"
+          action="URL_de_Submissão_do_Formulário"
+          method="post"
+        >
+          <label for="email" style="display: none">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          />
+          <input type="submit" value="Subscribe" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-sub {
+    border-top: var(--default-border);
+    border-bottom: var(--default-border);
+  }
+
+  .sub_comp {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+
+    & h2 {
+      font-size: 55px;
+    }
+
+    & p {
+      max-width: 40ch;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  /* Estilos gerais para resetar os estilos padrões dos inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="submit"] {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    letter-spacing: 2px;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    transition: all 0.6s ease;
+  }
+
+  /* Estilos específicos para os campos de entrada */
+
+  input {
+    border: 1.5px solid #a6a6a6 !important;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
+
+  .sub_email {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscription-form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+  }
+</style>

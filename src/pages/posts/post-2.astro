@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+import Base from "../../layouts/Base.astro";
+
+import handImg from "../../assets/images/hand-image.jpg";
+---
+
+<Base>
+  <section>
+    <div class="main-container">
+      <a class="blog_card" href="">
+        <div class="absolute-title">
+          <p>November 7, 2023 • Desing</p>
+          <h3>The Symphony of Colors</h3>
+        </div>
+        <Image src={handImg} width={500} alt="" transition:name="hand-img" /></a
+      >
+    </div>
+  </section>
+</Base>

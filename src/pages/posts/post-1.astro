@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+import Base from "../../layouts/Base.astro";
+
+import helloImg from "../../assets/images/hello-image.jpg";
+---
+
+<Base>
+  <section>
+    <div class="main-container">
+      <a class="blog_card" href="">
+        <div class="absolute-title">
+          <p>November 7, 2023 • Desing</p>
+          <h3>The Symphony of Colors</h3>
+        </div>
+        <Image
+          src={helloImg}
+          width={500}
+          alt=""
+          transition:name="hello-img"
+        /></a
+      >
+    </div>
+  </section>
+</Base>

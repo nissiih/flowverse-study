@@ -3,6 +3,7 @@ import Base from "@layouts/Base.astro";
 import BigNumberItem from "@components/BigNumberItem.astro";
 import TeamMemberCard from "@components/TeamMemberCard.astro";
 import FaqItem from "@components/FaqItem.astro";
+import SectionEmail from "@components/SectionEmail.astro";
 
 import { Image } from "astro:assets";
 
@@ -131,52 +132,37 @@ import handImg from "../assets/images/hand-image.jpg";
       <div class="blog_comp">
         <h2 class="x-hs-medium">Blog</h2>
         <div class="blog_grid">
-          <a class="blog_card" href="">
+          <a class="blog_card" href="/posts/post-1">
             <div class="absolute-title">
               <p>November 7, 2023 • Desing</p>
               <h3>The Symphony of Colors</h3>
             </div>
-            <Image src={helloImg} width={500} alt="" class="blog_image" /></a
+            <Image
+              src={helloImg}
+              width={500}
+              alt=""
+              transition:name="hello-img"
+              class="blog_image"
+            /></a
           >
-          <a class="blog_card" href="">
+          <a class="blog_card" href="/posts/post-2">
             <div class="absolute-title">
               <p>February 23, 2024 • Desing</p>
               <h3>Artistry of Digital Spaces</h3>
             </div>
-            <Image src={handImg} width={500} alt="" class="blog_image" /></a
+            <Image
+              src={handImg}
+              width={500}
+              alt=""
+              transition:name="hand-img"
+              class="blog_image"
+            /></a
           >
         </div>
       </div>
     </div>
   </section>
-  <section class="section-sub">
-    <div class="main-container">
-      <div class="sub_comp">
-        <h2 class="x-hs-medium">Get in Touch</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique duis
-        </p>
-        <div class="sub_email">
-          <form
-            class="subscription-form"
-            action="URL_de_Submissão_do_Formulário"
-            method="post"
-          >
-            <label for="email" style="display: none">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email Address"
-              required
-            />
-            <input type="submit" value="Subscribe" />
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+  <SectionEmail />
 </Base>
 
 <style>
@@ -320,14 +306,19 @@ import handImg from "../assets/images/hand-image.jpg";
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3.5em;
+
+    @media (max-width: 997px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .blog_card {
     position: relative;
+    height: 600px;
 
     & h3 {
       font-size: 28px;
-      font-weight: 600;
+      font-weight: 550;
       line-height: 1.2em;
     }
 
@@ -348,75 +339,8 @@ import handImg from "../assets/images/hand-image.jpg";
   .blog_image {
     height: 100%;
     width: 100%;
-  }
-
-  .section-sub {
-    border-top: var(--default-border);
-    border-bottom: var(--default-border);
-  }
-
-  .sub_comp {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5em;
-
-    & h2 {
-      font-size: 55px;
-    }
-
-    & p {
-      max-width: 40ch;
-      font-size: 18px;
-      font-weight: 500;
-    }
-  }
-
-  /* Estilos gerais para resetar os estilos padrões dos inputs */
-  input[type="text"],
-  input[type="email"],
-  input[type="submit"] {
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-
-  /* Estilos específicos para os campos de entrada */
-
-  input {
-    border: 1.5px solid #a6a6a6 !important;
-  }
-
-  input[type="text"],
-  input[type="email"] {
-    width: 500px;
-    margin-bottom: 1em;
-  }
-
-  input[type="submit"] {
-    width: 500px;
-    font-weight: 500;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-  }
-
-  .subscription-form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input[type="submit"]:hover {
-    background-color: white;
-    color: black;
+    position: absolute;
+    z-index: -1;
   }
 
   @media screen and (max-width: 997px) {

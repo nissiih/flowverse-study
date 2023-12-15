@@ -1,11 +1,112 @@
 ---
 import Base from "@layouts/Base.astro";
+import { Image } from "astro:assets";
+import TeamMemberCard from "@components/TeamMemberCard.astro";
+import FaqItem from "@components/FaqItem.astro"
+
+import aboutImg from "../assets/images/about-image.jpg";
 ---
 
-<Base title="This is the home page">
+<Base title="Flowverse - About">
+  <section class="section-gray-dark">
+    <div class="main-container">
+      <div class="what_comp">
+        <h1>About Us</h1>
+        <div class="what_grid">
+          <Image src={aboutImg} width={1500} alt="This is a background image" />
+          <div class="what_content">
+            <h2 class="overline">what we do</h2>
+            <h3 class="x-hs-medium">
+              Where Inspiration Meets Transformation
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <div class="main-container">
-      <h1>ALGUMA COISA</h1>
+      <div class="team_comp">
+        <h2>Our Team</h2>
+        <div class="team_grid">
+          <TeamMemberCard
+            name="Jack"
+            email="renata@lol.com"
+            role="Support"
+            img="blabla"
+            facebook="jack"
+          />
+          <TeamMemberCard
+            name="Roberto"
+            email="renata@lol.com"
+            role="Support"
+            img="blabla"
+          />
+          <TeamMemberCard
+            name="Renata"
+            email="renata@lol.com"
+            role="Support"
+            img="blabla"
+            linkedin="renata"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-gray-dark">
+    <div class="main-container">
+      <div class="faq_comp">
+        <h2 class="x-hs-medium">Faq</h2>
+        <div class="faq_grid">
+          <FaqItem
+            title="What is the typical timeline for completing a design project?"
+            text="orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+          />
+          <FaqItem
+            title="Can you work within specific budget constraints?"
+            text="orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+          />
+          <FaqItem
+            title="Do you offer any additional services such as branding or marketing strategy?"
+            text="orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+          />
+          <FaqItem
+            title="Can you provide examples of your previous design projects?"
+            text="orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+          />
+          <FaqItem
+            title="How do you stay updated on the latest design trends and technologies?"
+            text="orem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt."
+          />
+        </div>
+      </div>
     </div>
   </section>
 </Base>
+
+<style>
+  .what_comp {
+    & .overline {
+      color: currentColor;
+    }
+
+    & h1 {
+    margin-bottom: 1.5em;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1em;
+}
+  }
+
+  .team_comp {
+    & h2 {
+      margin-bottom: 1.5em;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1em;
+    }
+  }
+</style>

@@ -2,6 +2,8 @@
 :root {
   --main-red: #ed2f2f;
   --default-border: 1.9px solid #8080802f;
+
+  --custom-spacing: 2.5em;
 }
 
 *,
@@ -36,6 +38,11 @@ section.hero-section {
   padding: 0em;
 }
 
+footer {
+  padding: 3em;
+  background-color: #ebeaea;
+}
+
 body {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 400;
@@ -60,4 +67,81 @@ body {
 .section-gray-dark {
   background-color: #191919;
   color: white;
+}
+
+.what_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--custom-spacing);
+
+  & > img {
+    height: 25em;
+  }
+
+  & .what_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    & img {
+      width: 65px;
+      height: 65px;
+    }
+
+    & p {
+      max-width: 45ch;
+    }
+  }
+}
+.what_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--custom-spacing);
+
+  & > img {
+    height: 25em;
+  }
+
+  & .what_content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+
+    & img {
+      width: 65px;
+      height: 65px;
+    }
+
+    & p {
+      max-width: 45ch;
+    }
+  }
+}
+
+.team_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--custom-spacing);
+}
+
+.team_comp {
+  display: grid;
+  gap: 1.5em;
+
+  & h3 {
+    margin-bottom: 1.5em;
+  }
+}
+
+.faq_comp {
+  & .x-hs-medium {
+    margin-bottom: 1.5em;
+  }
+}
+
+.faq_grid {
+  display: grid;
+  gap: 1.5em;
 }

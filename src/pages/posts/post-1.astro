@@ -2,25 +2,192 @@
 import { Image } from "astro:assets";
 
 import Base from "../../layouts/Base.astro";
+import BlogCard from "@components/BlogCard.astro";
 
 import helloImg from "../../assets/images/hello-image.jpg";
 ---
 
 <Base>
+  <section class="section-blog">
+    <div class="main-container">
+      <div class="title-image">
+        <p>2/11/2023</p>
+        <h1>Balancing Values and Visuals</h1>
+        <div class="blog1-image">
+          <Image
+            src={helloImg}
+            width={1200}
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="blog-content">
+        <h2>Nobis consequatur dolor voluptas modi illum.</h2>
+        <p>
+          Voluptatem laboriosam repellendus. Eaque exercitationem et sed quis at
+          corporis eaque commodi asperiores. Aliquam autem suscipit occaecati
+          magni ut veniam eos. Corrupti omnis ea. Rerum numquam perferendis.
+          Laudantium neque odio reiciendis sed itaque quod enim autem cumque.
+          Nobis consequatur dolor voluptas modi illum. Voluptatem laboriosam
+          repellendus. Eaque exercitationem et sed quis at corporis eaque
+          commodi asperiores. Aliquam autem suscipit occaecati magni ut veniam
+          eos. Corrupti omnis ea. Rerum numquam perferendis. Laudantium neque
+          odio reiciendis sed itaque quod enim autem cumque.
+        </p>
+        <blockquote>
+          Culpa voluptatem similique odio fuga eum magnam blanditiis ab. Qui at
+          consequatur dolorem qui. Ipsa deserunt ad quis voluptatem corrupti
+          libero at fugit repudiandae. Saepe dignissimos quibusdam quis enim.
+        </blockquote>
+        <p>
+          Magnam delectus facere dolorem quia alias iure. Nihil minima ipsa qui.
+          Nulla quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim. Magnam
+          delectus facere dolorem quia alias iure. Nihil minima ipsa qui. Nulla
+          quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim.Magnam
+          delectus facere dolorem quia alias iure. Nihil minima ipsa qui. Nulla
+          quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim.
+        </p>
+        <h2>Nobis consequatur dolor voluptas modi illum.</h2>
+        <p>
+          Magnam delectus facere dolorem quia alias iure. Nihil minima ipsa qui.
+          Nulla quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim. Magnam
+          delectus facere dolorem quia alias iure. Nihil minima ipsa qui. Nulla
+          quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim.Magnam
+          delectus facere dolorem quia alias iure. Nihil minima ipsa qui. Nulla
+          quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim.
+        </p>
+        <ul class="list-circle">
+          <li>
+            Magnam delectus facere dolorem quia alias iure. Nihil minima ipsa
+            qui.
+          </li>
+          <li>Nulla quos possimus inventore laudantium molestias quidem</li>
+          <li>Qui animi voluptas eum libero nam sunt corrupti.</li>
+          <li>
+            Architecto quis nostrum cum quia provident esse reprehenderit. Velit
+            cumque et aliquam veritatis nulla minus quae.
+          </li>
+        </ul>
+        <p>
+          Magnam delectus facere dolorem quia alias iure. Nihil minima ipsa qui.
+          Nulla quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim. Magnam
+          delectus facere dolorem quia alias iure. Nihil minima ipsa qui. Nulla
+          quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim.Magnam
+          delectus facere dolorem quia alias iure. Nihil minima ipsa qui. Nulla
+          quos possimus inventore laudantium molestias quidem. Qui animi
+          voluptas eum libero nam sunt corrupti. Architecto quis nostrum cum
+          quia provident esse reprehenderit. Velit cumque et aliquam veritatis
+          nulla minus quae. Officiis quia quo mollitia iusto quas enim.
+        </p>
+      </div>
+    </div>
+  </section>
   <section>
     <div class="main-container">
-      <a class="blog_card" href="">
-        <div class="absolute-title">
-          <p>November 7, 2023 • Desing</p>
-          <h3>The Symphony of Colors</h3>
+      <div class="blog_comp">
+        <h2 class="x-hs-medium">Other Posts</h2>
+        <div class="blog_grid">
+          <BlogCard />
+          <BlogCard />
         </div>
-        <Image
-          src={helloImg}
-          width={500}
-          alt=""
-          transition:name="hello-img"
-        /></a
-      >
+      </div>
     </div>
   </section>
 </Base>
+
+<style >
+
+.section-blog {
+  border-bottom: var(--default-border);
+}
+
+  .list-circle {
+    list-style-type: disc;
+    padding: 40px;
+  }
+
+  blockquote {
+    border-left: 5px solid #e2e2e2;
+    margin: 0 0 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .blog1-image {
+    height: 700px;
+
+    & img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .blog-content {
+    max-width: 850px;
+    margin-inline: auto;
+    margin-top: 3em;
+    line-height: 1.6;
+
+    & h2 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1em;
+    }
+    & p,
+    ul {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    & > * {
+      margin-top: 1em;
+    }
+  }
+
+  .title-image {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    & h1 {
+      font-size: 130px;
+      font-weight: 700;
+      line-height: 1em;
+    }
+
+    & p {
+      font-size: 14px;
+    }
+  }
+  .blog_comp {
+    & h2 {
+      font-size: 65px;
+      margin-bottom: 1.5em;
+    }
+  }
+</style>

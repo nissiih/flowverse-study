@@ -1,0 +1,76 @@
+---
+import helloImg from "../assets/images/hello-image.jpg";
+import handImg from "../assets/images/hand-image.jpg";
+
+import { Image } from "astro:assets";
+---
+
+
+    <a class="blog_card" href="/posts/post-1">
+      <div class="absolute-title">
+        <p>November 2, 2023 • Branding</p>
+        <h3>Balancing Values and Visuals</h3>
+      </div>
+      <Image
+        src={helloImg}
+        width={1200}
+        alt=""
+        transition:name="hello-img"
+        class="blog_image"
+      /></a>
+    
+  <style is:global>
+  .blog_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5em;
+
+    @media (max-width: 997px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .blog_card {
+    position: relative;
+    height: 600px;
+
+    & h3 {
+      font-size: 28px;
+      font-weight: 550;
+      line-height: 1.2em;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+  .absolute-title {
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    padding: 15px 20px;
+    top: 10px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .blog_image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+
+  @media screen and (max-width: 997px) {
+    .team_grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .what_top {
+      grid-template-columns: 1fr;
+    }
+
+    .what_big-numbers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  </style>

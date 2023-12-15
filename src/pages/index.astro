@@ -4,14 +4,13 @@ import BigNumberItem from "@components/BigNumberItem.astro";
 import TeamMemberCard from "@components/TeamMemberCard.astro";
 import FaqItem from "@components/FaqItem.astro";
 import SectionEmail from "@components/SectionEmail.astro";
+import BlogCard from "@components/BlogCard.astro";
 
 import { Image } from "astro:assets";
 
 import heroImg from "../assets/images/hero-image.jpg";
 import whatImg from "../assets/images/what-img.jpg";
 import howImg from "../assets/images/how-image.jpg";
-import helloImg from "../assets/images/hello-image.jpg";
-import handImg from "../assets/images/hand-image.jpg";
 ---
 
 <Base title="Flowverse - home page">
@@ -132,32 +131,8 @@ import handImg from "../assets/images/hand-image.jpg";
       <div class="blog_comp">
         <h2 class="x-hs-medium">Blog</h2>
         <div class="blog_grid">
-          <a class="blog_card" href="/posts/post-1">
-            <div class="absolute-title">
-              <p>November 7, 2023 • Desing</p>
-              <h3>The Symphony of Colors</h3>
-            </div>
-            <Image
-              src={helloImg}
-              width={500}
-              alt=""
-              transition:name="hello-img"
-              class="blog_image"
-            /></a
-          >
-          <a class="blog_card" href="/posts/post-2">
-            <div class="absolute-title">
-              <p>February 23, 2024 • Desing</p>
-              <h3>Artistry of Digital Spaces</h3>
-            </div>
-            <Image
-              src={handImg}
-              width={500}
-              alt=""
-              transition:name="hand-img"
-              class="blog_image"
-            /></a
-          >
+          <BlogCard />
+          <BlogCard />
         </div>
       </div>
     </div>
@@ -165,7 +140,7 @@ import handImg from "../assets/images/hand-image.jpg";
   <SectionEmail />
 </Base>
 
-<style>
+<style is:global>
   body {
     height: 500vh;
   }
@@ -233,36 +208,6 @@ import handImg from "../assets/images/hand-image.jpg";
     }
   }
 
-  :root {
-    --custom-spacing: 2.5em;
-  }
-
-  .what_top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: var(--custom-spacing);
-
-    & > img {
-      height: 25em;
-    }
-
-    & .what_content {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5em;
-
-      & img {
-        width: 65px;
-        height: 65px;
-      }
-
-      & p {
-        max-width: 45ch;
-      }
-    }
-  }
-
   .what_big-numbers-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -270,31 +215,7 @@ import handImg from "../assets/images/hand-image.jpg";
     margin-top: calc(1.5 * var(--custom-spacing));
   }
 
-  .team_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--custom-spacing);
-  }
 
-  .team_comp {
-    display: grid;
-    gap: 1.5em;
-
-    & h3 {
-      margin-bottom: 1.5em;
-    }
-  }
-
-  .faq_comp {
-    & .x-hs-medium {
-      margin-bottom: 1.5em;
-    }
-  }
-
-  .faq_grid {
-    display: grid;
-    gap: 1.5em;
-  }
 
   .blog_comp {
     & h2 {
